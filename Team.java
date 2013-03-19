@@ -1,7 +1,7 @@
 /**
  * Team
  *
- * 		A class representing one team in the NCAA tournament bracket.
+ * 		A class representing one of the teams in the NCAA tournament bracket.
  */
 public class Team {
 
