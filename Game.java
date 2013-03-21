@@ -3,14 +3,11 @@
  */
 public class Game {
 	
-	String teamA, teamB;
+	private Team teamA, teamB;
 
-	public static void main(String[] args) {
-		playGame(teamA,teamB);
-	}
-	public Game(String teamA, String teamB) {
-		this.teamB;
-		this.teamA;
+	public Game(Team teamA, Team teamB) {
+		this.teamA = teamA;
+		this.teamB = teamB;
 	}
 	/**
 	 * Winner
@@ -18,12 +15,12 @@ public class Game {
 	 * @param  teamB - second team
 	 * @return       the winner based upon the win percent of teamA when playing teamB
 	 */
-	public String playGame(String teamA, String teamB) {
-		double wAB = (teamA.getWinPer*(1-teamB.getWinPer))/(teamA.getWinPer*(1-teamB.getWinPer) + teamB.getWinPer*(1-teamA.getWinPer));
-		if(wAB > teamA.getWinPer) {
-			return teamA;
+	public Team playGame() {
+		double wAB = (this.teamA.getWinPer*(1-this.teamB.getWinPer))/(this.teamA.getWinPer*(1-this.teamB.getWinPer) + this.teamB.getWinPer*(1-this.teamA.getWinPer));
+		if(wAB >= 0.0 + (double)(Math.random()*1.0)) {
+			return this.teamA;
 		}
-		return teamB;
+		return this.teamB;
 	}
 
 }
